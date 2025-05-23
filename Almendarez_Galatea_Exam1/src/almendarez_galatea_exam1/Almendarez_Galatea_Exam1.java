@@ -71,24 +71,56 @@ public class Almendarez_Galatea_Exam1 {
                     switch (opci) {
                         case 1:
                             System.out.println("Ingrese la palabra que desea cifrar:");
+                            String cifrarmen= obj.next();
+                           String cifrado="";
+                           for(int ini=0; ini<cifrarmen.length(); ini++){
+                                char d = cifrarmen.charAt(ini);
+                                if(Character.isLowerCase(d)){
+                                    cifrado+=(char)('z'-(d-'a'));   
+                                }else if(Character.isUpperCase(d)){
+                                    cifrado+=(char)('Z'-(d-'A'));
+                                }else{
+                                    cifrado+= d;
+                                }
+                            }
+                            System.out.println("su mensaje descifrado es: "+ cifrado);
+
+                           
+                           
+                            
                             break;
+                            
+                            
                         case 2:
                             System.out.println("Ingrese la palabra que desea descifrar:");
+                            String descifrarmen= obj.next();
+                            String guarda="";
+                            
+                           // char d = descifrarmen.charAt(ini);
+                            
+                            for(int ini=0; ini<descifrarmen.length(); ini++){
+                                char d = descifrarmen.charAt(ini);
+                                if(Character.isLowerCase(d)){
+                                    guarda+=(char)('z'-(d-'a'));   
+                                }else if(Character.isUpperCase(d)){
+                                    guarda+=(char)('Z'-(d-'A'));
+                                }else{
+                                    descifrarmen+= d;
+                                }
+                            }
+                            System.out.println("su mensaje descifrado es: "+ guarda);
 
                             break;
                         default:
 
-                            while (opci != 1 || opci != 2) {
+                          
                                 System.out.println("opcion invalida :(");
-                                System.out.println("vuelva a ingresar su opcion");
-                                opci = obj.nextInt();
+                               
+                                break;
 
-                            }
+               
 
-                    }
-                    break;
-
-                case 3:
+                case 3://-------------------------------------------------------------------------------------------------------
                     System.out.println("---------------");
                     System.out.println("     JUEGO     ");
                     System.out.println(" piedra, papel ");
@@ -136,7 +168,7 @@ public class Almendarez_Galatea_Exam1 {
                     System.out.println("---------------");
                     System.out.println("    ADIVINAR   ");
                     System.out.println("---------------");
-                    int numeropro= alea.nextInt(6);//agarra hasta el 100 yuju eleccion de la pc
+                    int numeropro= alea.nextInt(101);//agarra hasta el 100 yuju eleccion de la pc
                     int contador=10;
                     
                     System.out.println("adivine el numero que elijio el sistema en 10 intentos o menos(0 al 100)");
@@ -197,4 +229,4 @@ public class Almendarez_Galatea_Exam1 {
   
    
     }
-}
+}}
