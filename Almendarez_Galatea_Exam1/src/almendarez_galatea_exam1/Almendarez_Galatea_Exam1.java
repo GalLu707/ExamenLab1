@@ -69,14 +69,15 @@ public class Almendarez_Galatea_Exam1 {
                     System.out.println(" piedra, papel ");
                     System.out.println("    o tijera   ");
                     System.out.println("---------------");
-                    String ppotpc= "";
+                    
+                    String ppotpc= "";//opcion que elije el sistema
                     boolean jugar = false;
                     int contador;
                     
                     while(!jugar){
                       System.out.println("Elija una opcion: piedra, papel o tijera");
-                    String opcionppot = obj.next().toLowerCase();
-                    int opcionpc = alea.nextInt(3);
+                    String opcionppot = obj.next().toLowerCase(); //opcion usuario
+                    int opcionpc = alea.nextInt(3); 
                     
                     
                     if(opcionpc==0){
@@ -88,10 +89,20 @@ public class Almendarez_Galatea_Exam1 {
                     }
                         System.out.println("el sistema elijio:" + ppotpc);
                         
-                        if(ppotpc.equals(opcionppot)){
+                    if(ppotpc.equals(opcionppot)){
                             System.out.println("es un empate!!");
+                        }else if(opcionppot.equals("piedra") &&  ppotpc.equals("tijera") ||opcionppot.equals("papel") &&  ppotpc.equals("piedra") ||opcionppot.equals("tijera") &&  ppotpc.equals("papel")){
+                            System.out.println("Ganaste");
+                        }else{
+                            System.out.println("perdiste :(");
                         }
-                    
+                        System.out.println("desea jugar otra vez?(si/no)");
+                        String otravez= obj.next().toLowerCase();
+                        if(otravez.equals("si")){
+                            System.out.println("empezando otra partida");
+                        }else if(otravez.equals("no")){
+                            jugar= true;
+                        }
                     
                     
                     }
