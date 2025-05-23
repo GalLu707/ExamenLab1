@@ -61,22 +61,23 @@ public class Almendarez_Galatea_Exam1 {
                     System.out.println("---------------");
                     System.out.println("     CLAVE     ");
                     System.out.println("---------------");
-    
+
+                    //minimenu de cifrar
                     System.out.println("1.cifrar");
                     System.out.println("2.descifrar");
-                    
+
                     System.out.println("Que desea hacer?");
-                    int opci= obj.nextInt();
-                    switch(opci){
+                    int opci = obj.nextInt();
+                    switch (opci) {
                         case 1:
-                            System.out.println(" when haces tus momos");
+                            System.out.println("Ingrese la palabra que desea cifrar:");
                             break;
                         case 2:
-                            System.out.println("en video");
-                            
+                            System.out.println("Ingrese la palabra que desea descifrar:");
+
                             break;
                         default:
-                            
+
                             while (opci != 1 || opci != 2) {
                                 System.out.println("opcion invalida :(");
                                 System.out.println("vuelva a ingresar su opcion");
@@ -84,10 +85,9 @@ public class Almendarez_Galatea_Exam1 {
 
                             }
 
-
                     }
                     break;
-                    
+
                 case 3:
                     System.out.println("---------------");
                     System.out.println("     JUEGO     ");
