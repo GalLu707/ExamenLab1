@@ -32,7 +32,7 @@ public class Almendarez_Galatea_Exam1 {
             
             //switch para ingresar a las opciones 
             switch(opcionU){
-                case 1:
+                case 1://-------------------------------------------------------------------------------------------------------
                     System.out.println("---------------");
                     System.out.println("    PIRAMIDE   ");
                     System.out.println("---------------");
@@ -57,7 +57,7 @@ public class Almendarez_Galatea_Exam1 {
                     }
                     
                     break;
-                case 2:
+                case 2: //-------------------------------------------------------------------------------------------------------
                     System.out.println("---------------");
                     System.out.println("     CLAVE     ");
                     System.out.println("---------------");
@@ -72,7 +72,6 @@ public class Almendarez_Galatea_Exam1 {
                     
                     String ppotpc= "";//opcion que elije el sistema
                     boolean jugar = false;
-                    int contador;
                     
                     while(!jugar){
                       System.out.println("Elija una opcion: piedra, papel o tijera");
@@ -92,7 +91,7 @@ public class Almendarez_Galatea_Exam1 {
                     if(ppotpc.equals(opcionppot)){
                             System.out.println("es un empate!!");
                         }else if(opcionppot.equals("piedra") &&  ppotpc.equals("tijera") ||opcionppot.equals("papel") &&  ppotpc.equals("piedra") ||opcionppot.equals("tijera") &&  ppotpc.equals("papel")){
-                            System.out.println("Ganaste");
+                            System.out.println("GANASTE!!");
                         }else{
                             System.out.println("perdiste :(");
                         }
@@ -105,19 +104,62 @@ public class Almendarez_Galatea_Exam1 {
                         }
                     
                     
-                    }
-                    
-                    
-                    
+                    }   
                     
                     break;
-                case 4:
+                case 4://-------------------------------------------------------------------------------------------------------
                     System.out.println("---------------");
                     System.out.println("    ADIVINAR   ");
                     System.out.println("---------------");
+                    int numeropro= alea.nextInt(6);//agarra hasta el 100 yuju eleccion de la pc
+                    int contador=0;
+                    
+                    System.out.println("adivine el numero que elijio el sistema en 10 intentos o menos(0 al 100)");
+                    int adiusu= obj.nextInt();//numero del usuario
+                   
+                    
+                    while(adiusu!= numeropro){
+                       
+                       if(adiusu>numeropro){
+                           System.out.println("el numero que ingreso es mayor al numero que el sistema eligio");
+                           contador++;
+                           
+                           
+                           System.out.println("lleva " + contador + " intentos");
+                           System.out.println("vuelva a ingresar un numero:");
+                          adiusu= obj.nextInt();
+                                
+                       } else if (adiusu<numeropro){
+                           System.out.println("el numero que ingreso es menor al numero que el sistema eligio");
+                           contador++;
+                           
+                           System.out.println("lleva " + contador + " intentos");
+                           System.out.println("vuelva a ingresar un numero:");
+                          adiusu= obj.nextInt();
+                       }
+                      if(adiusu==numeropro){
+                          System.out.println("GANASTE!! ");
+                          System.out.println("el numero que el sistema elijio fue " +numeropro );
+                   
+                      }
+                      if(contador==9){
+                          System.out.println("limite de intentos excedido");
+                          System.out.println("Perdio :(");
+                          break;
+                      }
+                          
+
+                      
+                 
+                    
+                    }    
+                    
+                    
+                    
+                    
                     
                     break;
-                case 5:
+                case 5://-------------------------------------------------------------------------------------------------------
                     System.out.println("Saliendo del sistema");
                     
             }
