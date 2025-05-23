@@ -61,8 +61,33 @@ public class Almendarez_Galatea_Exam1 {
                     System.out.println("---------------");
                     System.out.println("     CLAVE     ");
                     System.out.println("---------------");
+    
+                    System.out.println("1.cifrar");
+                    System.out.println("2.descifrar");
                     
+                    System.out.println("Que desea hacer?");
+                    int opci= obj.nextInt();
+                    switch(opci){
+                        case 1:
+                            System.out.println(" when haces tus momos");
+                            break;
+                        case 2:
+                            System.out.println("en video");
+                            
+                            break;
+                        default:
+                            
+                            while (opci != 1 || opci != 2) {
+                                System.out.println("opcion invalida :(");
+                                System.out.println("vuelva a ingresar su opcion");
+                                opci = obj.nextInt();
+
+                            }
+
+
+                    }
                     break;
+                    
                 case 3:
                     System.out.println("---------------");
                     System.out.println("     JUEGO     ");
@@ -112,7 +137,7 @@ public class Almendarez_Galatea_Exam1 {
                     System.out.println("    ADIVINAR   ");
                     System.out.println("---------------");
                     int numeropro= alea.nextInt(6);//agarra hasta el 100 yuju eleccion de la pc
-                    int contador=0;
+                    int contador=10;
                     
                     System.out.println("adivine el numero que elijio el sistema en 10 intentos o menos(0 al 100)");
                     int adiusu= obj.nextInt();//numero del usuario
@@ -122,18 +147,18 @@ public class Almendarez_Galatea_Exam1 {
                        
                        if(adiusu>numeropro){
                            System.out.println("el numero que ingreso es mayor al numero que el sistema eligio");
-                           contador++;
+                           contador--;
                            
                            
-                           System.out.println("lleva " + contador + " intentos");
+                           System.out.println("tiene " + contador + " intentos");
                            System.out.println("vuelva a ingresar un numero:");
                           adiusu= obj.nextInt();
                                 
                        } else if (adiusu<numeropro){
                            System.out.println("el numero que ingreso es menor al numero que el sistema eligio");
-                           contador++;
+                           contador--;
                            
-                           System.out.println("lleva " + contador + " intentos");
+                           System.out.println("tiene  " + contador + " intentos");
                            System.out.println("vuelva a ingresar un numero:");
                           adiusu= obj.nextInt();
                        }
@@ -142,7 +167,7 @@ public class Almendarez_Galatea_Exam1 {
                           System.out.println("el numero que el sistema elijio fue " +numeropro );
                    
                       }
-                      if(contador==9){
+                      if(contador==1){
                           System.out.println("limite de intentos excedido");
                           System.out.println("Perdio :(");
                           break;
