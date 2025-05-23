@@ -28,6 +28,39 @@ public class Almendarez_Galatea_Exam1 {
 
             System.out.println("Ingrese la opcion a la que desea entrar:");
             opcionU = obj.nextInt();
+            
+            //switch para ingresar a las opciones 
+            switch(opcionU){
+                case 1:
+                    System.out.println("---------------");
+                    System.out.println("    PIRAMIDE   ");
+                    System.out.println("---------------");
+                    
+                    break;
+                case 2:
+                    System.out.println("---------------");
+                    System.out.println("     CLAVE     ");
+                    System.out.println("---------------");
+                    
+                    break;
+                case 3:
+                    System.out.println("---------------");
+                    System.out.println("     JUEGO     ");
+                    System.out.println(" piedra, papel ");
+                    System.out.println("    o tijera   ");
+                    System.out.println("---------------");
+                    
+                    break;
+                case 4:
+                    System.out.println("---------------");
+                    System.out.println("    ADIVINAR   ");
+                    System.out.println("---------------");
+                    
+                    break;
+                case 5:
+                    System.out.println("Saliendo del sistema");
+                    
+            }
      
         }
             
